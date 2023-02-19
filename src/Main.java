@@ -230,7 +230,21 @@ public class Main {
     }
 
     public static void Task8() {
-        // Залупа ебаная!
+        String text = "мадам топот казак лес топот мадам зал азазель лиссабон нобассил дедок кодед";
+        String[] words = text.split(" ");
+
+        ArrayList<String[]> pairs = new ArrayList<>();
+        for (int i = 0; i < words.length; i++) {
+            for (int j = i+1; j < words.length; j++) {
+                if (words[i].equals(new StringBuilder(words[j]).reverse().toString())) {
+                    pairs.add(new String[] {words[i], words[j]});
+                }
+            }
+        }
+
+        for (String[] pair : pairs) {
+            System.out.println("(" + pair[0] + ", " + pair[1] + ")");
+        }
     }
 
     //Найти и напечатать, сколько раз повторяется в тексте каждое слово.
@@ -336,11 +350,11 @@ public class Main {
         //Task5();
         //Task6();
         //Task7();
-        //Task8();
+        Task8();
         //Task9();
         //Task10();
         //Task11();
         //Task12();
-        Task13();
+//        Task13();
     }
 }
