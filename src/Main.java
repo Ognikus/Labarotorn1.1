@@ -343,7 +343,8 @@ public class Main {
         return Math.abs(area) / 2;
     }
     public static void main(String[] args) {
-        while (true){
+        boolean f = true;
+        while (f){
             Scanner scanner = new Scanner(System.in);
             System.out.println("Выберите задание из списка ниже:");
             System.out.println("-----------------------------------------------------------------------------------------------");
@@ -366,6 +367,7 @@ public class Main {
             System.out.print("Введите Номер задания: ");
             int n = scanner.nextInt();
             switch (n) {
+                case 0 -> f = false;
                 case 1 -> Task1();
                 case 2 -> Task2();
                 case 3 -> Task3();
@@ -379,6 +381,7 @@ public class Main {
                 case 11 -> Task11();
                 case 12 -> Task12();
                 case 13 -> Task13();
+                default -> System.out.println("Введите указанные номера заданий!");
             }
         }
     }
