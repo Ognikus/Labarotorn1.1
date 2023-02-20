@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Task11Reh {
-    public static void main(String[] args) {
+    Task11Reh() {
         // заданное множество точек
         Point[] points = {
                 new Point(1, 2),

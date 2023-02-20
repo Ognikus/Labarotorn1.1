@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Task12Reh {
-    public static void main(String[] args) {
+    Task12Reh () {
         List<Point> points = new ArrayList<>();
         points.add(new Point(0, 0));
         points.add(new Point(1, 1));
